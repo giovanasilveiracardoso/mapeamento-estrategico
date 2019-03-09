@@ -15,7 +15,7 @@ Executando exemplo:
    ``$ docker build -t giovanacardoso/mapeamento-estrategico .``
 
 4 - Iniciar o container através do comando abaixo:
-	``$ docker run -p 8080 --rm -it giovanacardoso/mapeamento-estrategico``
+	``$ docker run -p 8080:8080 --rm -it giovanacardoso/mapeamento-estrategico``
 
 5 - Acessar através do browser:
 	http://localhost:8080/
