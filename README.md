@@ -21,4 +21,4 @@ Executando exemplo:
 	http://localhost:8080/
 	
 6 - Acessar api que retorna as visitas que devem ser efetuadas pelos representantes:
-	http://localhost:8080/visitas
+	http://localhost:8080/visita
