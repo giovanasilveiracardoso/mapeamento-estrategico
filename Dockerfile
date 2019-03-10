@@ -1,7 +1,7 @@
 FROM maven:3.3-jdk-8 as builder
 COPY . /usr/src/mymaven
 WORKDIR /usr/src/mymaven
-RUN mvn clean install -f /usr/src/mymaven -DskipTests
+RUN mvn clean install -f /usr/src/mymaven
 
 FROM java:8
 
