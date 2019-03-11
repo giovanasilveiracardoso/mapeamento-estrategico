@@ -3,3 +3,7 @@ spring:
     serialization:
       indent_output: true
       write_dates_as_timestamps: false
+server:
+  port: 4201
+  servlet:
+    context-path: /api
