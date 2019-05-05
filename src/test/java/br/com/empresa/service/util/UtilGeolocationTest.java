@@ -4,6 +4,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
+import br.com.empresa.util.UtilGeolocation;
+
 public class UtilGeolocationTest {
 
 	@Test

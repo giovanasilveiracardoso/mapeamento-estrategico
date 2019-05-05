@@ -1,4 +1,4 @@
-package br.com.empresa.service.util;
+package br.com.empresa.util;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -34,7 +34,7 @@ public class UtilGeolocation {
 			return distanciaFormatadaEmKm;
 		}
 		
-		return metrosDeDistancia.toString() + unidadeDeMedidaMetros;
+		return distanciaFormatada;
 	}
 	
 }

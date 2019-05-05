@@ -14,7 +14,7 @@ import br.com.empresa.entity.Loja;
 import br.com.empresa.service.FuncionarioService;
 import br.com.empresa.service.LojaService;
 import br.com.empresa.service.VisitaLojaRepresentanteService;
-import br.com.empresa.service.util.UtilGeolocation;
+import br.com.empresa.util.UtilGeolocation;
 
 @Service
 public class VisitaLojaRepresentanteServiceImpl implements VisitaLojaRepresentanteService {
