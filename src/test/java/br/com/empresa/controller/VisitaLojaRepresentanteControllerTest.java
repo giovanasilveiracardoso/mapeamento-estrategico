@@ -59,7 +59,7 @@ public class VisitaLojaRepresentanteControllerTest extends ControllerTestConfigu
 		
 		Map<String, String> lojasDistancias = new HashMap<String, String>();
 		lojasDistancias.put(loja2.getNome(), "599 Metros");
-		lojasDistancias.put(loja1.getNome(), "554 Metros");
+		lojasDistancias.put(loja1.getNome(), "555 Metros");
 
 		VisitaLojaRepresentanteDTO visitaLojaRepresentanteDTO1 = new VisitaLojaRepresentanteDTO(funcionario1.getNome(), lojasDistancias);
 		VisitaLojaRepresentanteDTO visitaLojaRepresentanteDTO2 = new VisitaLojaRepresentanteDTO(funcionario2.getNome(), new HashMap<String, String>());

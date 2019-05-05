@@ -17,17 +17,24 @@ public class UtilGeolocation {
 	}
 
 	public static String formatarDistancia(Double distancia) {
-		String unidadeDeMedida = " Metros";
-		if (distancia >= 1.0) {
-			unidadeDeMedida = " Km";
-		} else if (distancia != 0.0) {
-			distancia = distancia * 1000.0;
+		String unidadeDeMedidaMetros = " Metros";
+		Integer quilometro = new BigDecimal(distancia).setScale(0, RoundingMode.DOWN).intValue();
+		BigDecimal casaDecimal = new BigDecimal(distancia - quilometro).setScale(3, RoundingMode.HALF_DOWN);
+		Integer metrosDeDistancia = new BigDecimal(casaDecimal.doubleValue() * 1000.0).setScale(0, RoundingMode.HALF_DOWN).intValue();
+		String distanciaFormatada = metrosDeDistancia.toString() + unidadeDeMedidaMetros;
+		
+		if (quilometro >= 1) {
+			String unidadeDeMedidaKm = " Km";
+			
+			String distanciaFormatadaEmKm = quilometro.toString() + unidadeDeMedidaKm;
+			if(metrosDeDistancia > 0) {
+				distanciaFormatadaEmKm += " e " + distanciaFormatada;
+			}
+			
+			return distanciaFormatadaEmKm;
 		}
 		
-		BigDecimal distanciaEmBigDecimal = new BigDecimal(distancia);
-		distanciaEmBigDecimal = distanciaEmBigDecimal.setScale(0, RoundingMode.HALF_UP);
-		
-		return distanciaEmBigDecimal + unidadeDeMedida;
+		return metrosDeDistancia.toString() + unidadeDeMedidaMetros;
 	}
 	
 }
