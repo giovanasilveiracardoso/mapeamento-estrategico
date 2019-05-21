@@ -1,4 +1,4 @@
-package br.com.empresa.service.util;
+package br.com.empresa.util;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
